@@ -2,11 +2,20 @@
 
 int main(int argc, char *argv[]) {
 	float pesoenkg, alturaenmetros, IMC;
+do{
 printf("ingrese su altura en metros: \n");
 scanf("%f", &alturaenmetros);
-
-printf("ingrese su peso en kilogramos: \n");
-scanf("%f", &pesoenkg);
+if (alturaenmetros <= 0){
+	printf("ingrese una altura valida \n ");
+}}
+while (alturaenmetros <= 0);
+do{
+	printf("ingrese su peso en kilogramos: \n");
+	scanf("%f", &pesoenkg);
+	if (pesoenkg <= 0){
+		printf("ingrese un peso valido \n ");
+	}}
+while (pesoenkg <= 0);
 
 IMC = pesoenkg / (alturaenmetros * alturaenmetros);
 
@@ -22,26 +31,7 @@ else if(IMC <= 18.5){
 else{
 	printf("Su IMC es BAJO PESO\n");
 }
-printf("IMC es de: %f \n", IMC);
-	printf("    Índice    |  Condición \n -----------------------------\n\n <18.5     |  Bajo peso\n 18.5 a 24.9  |  Normal \n 25.0 a 29.9  |  Sobrepeso \n >=30     |  Obesidad");
-	
-	
-	return 0;
-}
-
-#include <stdio.h>
-
-int main(int argc, char *argv[]) {
-	float pesoenkg, alturaenmetros, IMC;
-printf("ingrese su altura en metros: \n");
-scanf("%f", &alturaenmetros);
-
-printf("ingrese su peso en kilogramos: \n");
-scanf("%f", &pesoenkg);
-
-IMC = pesoenkg / (alturaenmetros * alturaenmetros);
-
-printf("IMC es de: %f \n", IMC);
+printf("IMC es de: %.2f \n", IMC);
 	printf("    Índice    |  Condición \n -----------------------------\n\n <18.5     |  Bajo peso\n 18.5 a 24.9  |  Normal \n 25.0 a 29.9  |  Sobrepeso \n >=30     |  Obesidad");
 	
 	
