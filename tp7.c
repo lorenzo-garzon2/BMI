@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-// 
+// https://github.com/lorenzo-garzon2/BMI/tree/main
 int main(int argc, char *argv[]) {
 	int cant_productos, slot_max, slot_min;
 	double *codigos_barra;
